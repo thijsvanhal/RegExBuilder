@@ -68,6 +68,9 @@ textarea {
     padding: 10px;
     font-size: 12px;
 }
+.textarea-results {
+    height: 150px;
+}
 input {
     margin-left: 10px;
 }

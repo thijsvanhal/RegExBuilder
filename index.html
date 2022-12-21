@@ -37,17 +37,17 @@
   </style>
   </head>
   <body>
-    <div class="container-md">
+    <div class="container-sm">
       <!-- Content here -->
       <h1>RegEx Builder voor Google Search Console & Google Analytics</h1>
     </div>
-    <div class="container-md">
+    <div class="container-sm">
       <p>
         <label for="input-area">Voeg hier je urls toe</label>
         <textarea class="input-area" id="input-area" rows="6"></textarea>
       </p>
     </div>
-    <div class="container-md">
+    <div class="container-sm">
       <p>
         Hoe wil je dat de urls matchen in Google Search Console of Google Analytics?
         <label>
@@ -61,19 +61,17 @@
       </p>
       <button type="button" class="btn btn-primary" id="generate-button">Genereer RegEx</button>
     </div>
-    <div class="container-md">
+    <div class="container-sm">
       <div class="row">
-        <div class="col">
-          <p>
-            <label for="result-gsc">Google Search Console RegEx</label>
-            <textarea class="result-gsc" id="result-gsc" rows="6"></textarea>
-          </p>
+        <div class="col-sm">
+          <label for="result-gsc">Google Search Console RegEx</label>
+          <textarea class="textarea-results" id="result-gsc"></textarea>
+          <div class="tekens" id="tekens-gsc"></div>
         </div>
-        <div class="col">
-          <p>
-            <label for="result-ga">Google Analytics RegEx</label>
-            <textarea class="result-ga" id="result-ga" rows="6"></textarea>
-          </p>
+        <div class="col-sm">
+          <label for="result-ga">Google Analytics RegEx</label>
+          <textarea class="textarea-results" id="result-ga"></textarea>
+          <div class="tekens" id="tekens-ga"></div>
         </div>
       </div>
     </div>

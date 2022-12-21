@@ -34,19 +34,37 @@ function generateRegexGA(values) {
     }
 }
 
+// Functie Length GSC
+function getLengthGSC(regexgsc) {
+    const string = regexgsc.toString()
+    return new String(`${string.length} Tekens`);
+}
+
+// Functie Length GA
+function getLengthGA(regexga) {
+    const string = regexga.toString()
+    return new String(`${string.length} Tekens`);
+}
+
 // Constanten
 const button = document.getElementById('generate-button');
 const textField = document.getElementById('input-area');
 const resultTextareaGSC = document.getElementById('result-gsc');
 const resultTextareaGA = document.getElementById('result-ga');
+const resultLengthGSC = document.getElementById('tekens-gsc');
+const resultLengthGA = document.getElementById('tekens-ga');
 
 // Button click
 button.addEventListener('click', () => {
     const values = textField.value;
     const regexgsc = generateRegexGSC(values);
     const regexga = generateRegexGA(values);
+    const lengthGSC = getLengthGSC(regexgsc);
+    const lengthGA = getLengthGA(regexga);
     resultTextareaGSC.value = regexgsc.toString();
     resultTextareaGA.value = regexga.toString();
+    resultLengthGSC.textContent = lengthGSC.toString();
+    resultLengthGA.textContent = lengthGA.toString();
 });
 
 // Zorg dat output geselecteerd wordt
