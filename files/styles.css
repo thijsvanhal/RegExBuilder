@@ -91,3 +91,6 @@ input {
 #top-container {
     margin-top: 30px;
 }
+.nav-link.active {
+    color: #000000 !important; 
+}
