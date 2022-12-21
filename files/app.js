@@ -1,4 +1,4 @@
-// JavaScript
+// JavaScript Pagina's
 
 // Functie GSC 
 function generateRegexGSC(values) {

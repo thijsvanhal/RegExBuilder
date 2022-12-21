@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoekwoorden RegEx Builder - Thijs van Hal</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Een RegEx builder gemaakt door Thijs van Hal">
+  <link rel="stylesheet" href="../files/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="../files/styles.css" type="text/css">
+  <link rel="preload" as="font" href="/files/font/mada-regular-webfont.woff2">
+  <link rel="preload" as="font" href="/files/font/mada-bold-webfont.woff2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <style type="text/css" media="screen">
+    @font-face {
+      font-family: 'madaregular';
+      src: url('../files/font/mada-regular-webfont.woff2') format('woff2'),
+         url('../files/font/mada-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+    }
+    @font-face {
+      font-family: 'madabold';
+      src: url('../files/font/mada-bold-webfont.woff2') format('woff2'),
+         url('../files/font/mada-bold-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container-sm">
+      <!-- Content here -->
+      <h1>Zoekwoord RegEx Builder</h1>
+    </div>
+    <div class="container-sm">
+      <p>
+        <label for="input-area">Voeg hier je zoekwoorden toe</label>
+        <textarea class="input-area" id="input-area" rows="6"></textarea>
+      </p>
+    </div>
+    <div class="container-sm">
+      <button type="button" class="btn btn-primary" id="generate-button">Genereer RegEx</button>
+    </div>
+    <div class="container-sm">
+      <div class="row">
+        <div class="col-sm" id="resultaat">
+          <label for="result-gsc">Google Search Console RegEx Bevat</label>
+          <textarea class="textarea-results" id="result-bevat"></textarea>
+          <div class="tekens" id="tekens-bevat"></div>
+        </div>
+        <div class="col-sm" id="resultaat">
+          <label for="result-ga">Google Analytics RegEx Exact</label>
+          <textarea class="textarea-results" id="result-exact"></textarea>
+          <div class="tekens" id="tekens-exact"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-sm">
+      <h2>Zoekwoord RegEx maken voor Google Search Console</h2>
+      <p>Hier volgt uitleg....</p>
+    </div>
+    <!-- JS Files -->
+    <script type="text/javascript" async src="../files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>      
+  </body>
+</html>
