@@ -8,8 +8,6 @@
   <meta name="description" content="Specifieke pagina's filteren met RegEx in Google Search Console of Google Analytics? Met de RegEx builder bouw je gemakkelijk een RegEx voor GSC en GA.">
   <link rel="stylesheet" href="./files/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="./files/styles.css" type="text/css">
-  <link rel="preload" as="font" href="./files/font/mada-regular-webfont.woff2">
-  <link rel="preload" as="font" href="./files/font/mada-bold-webfont.woff2">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -17,13 +15,14 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <style type="text/css" media="screen">
+  <style type="text/css" media="screen" link rel="preload" as="font">
     @font-face {
       font-family: 'madaregular';
       src: url('./files/font/mada-regular-webfont.woff2') format('woff2'),
          url('./files/font/mada-regular-webfont.woff') format('woff');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
 
     }
     @font-face {
@@ -32,6 +31,7 @@
          url('./files/font/mada-bold-webfont.woff') format('woff');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
 
     }
   </style>
@@ -71,15 +71,15 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar navbar-expand">
-      <div class="container-sm">
-        <a class="navbar-brand" id="navbar" href="/">RegEx Builder</a>
-        <div class="collapse navbar-collapse" id="navbar">
+      <div class="container-sm" id="navbar">
+        <a class="navbar-brand" href="/">RegEx Builder</a>
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto">
-            <li class="nav-item" id="navbar">
-              <a class="nav-link active" id="navbar" href="/">Pagina's</a>
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Pagina's</a>
             </li>
-            <li class="nav-item" id="navbar">
-              <a class="nav-link" id="navbar" href="/zoekwoorden/">Zoekwoorden</a>
+            <li class="nav-item">
+              <a class="nav-link" href="/zoekwoorden/">Zoekwoorden</a>
             </li>
           </ul>
         </div>

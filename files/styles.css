@@ -3,12 +3,14 @@
     src: url(https://mixer.thijsvanhal.nl/files/files/font/mada-regular-webfont.woff2) format('woff2'), url(https://mixer.thijsvanhal.nl/files/files/font/mada-regular-webfont.woff) format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: madabold;
     src: url(https://mixer.thijsvanhal.nl/files/files/font/mada-bold-webfont.woff2) format('woff2'), url(https://mixer.thijsvanhal.nl/files/files/font/mada-bold-webfont.woff) format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @media (min-width:1280px) {
     .container {
@@ -84,13 +86,19 @@ input {
     background-color: #ffffff;
     height: 60px;
 }
-#navbar {
-    font-family: madabold;
-    color: #02343f; 
-}
 #top-container {
     margin-top: 30px;
 }
+.navbar-brand {
+    font-family: madabold;
+    color: #02343f; 
+}
+.nav-link {
+    font-family: madabold;
+    color: #02343f;
+}
 .nav-link.active {
-    color: #000000 !important; 
+    font-family: madabold;
+    color: #02343f !important;
+    text-decoration: underline; 
 }
