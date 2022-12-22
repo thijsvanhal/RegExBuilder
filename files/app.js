@@ -65,6 +65,8 @@ button.addEventListener('click', () => {
     resultTextareaGA.value = regexga.toString();
     resultLengthGSC.textContent = lengthGSC.toString();
     resultLengthGA.textContent = lengthGA.toString();
+    window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({'event': 'regex_pagina'});
 });
 
 // Zorg dat output geselecteerd wordt

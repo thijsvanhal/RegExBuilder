@@ -45,6 +45,8 @@ button.addEventListener('click', () => {
     resultTextareaExact.value = regexExact.toString();
     resultLengthBevat.textContent = lengthBevat.toString();
     resultLengthExact.textContent = lengthExact.toString();
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'event': 'regex_zoekwoorden'});
 });
 
 // Zorg dat output geselecteerd wordt
