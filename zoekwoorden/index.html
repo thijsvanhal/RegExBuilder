@@ -102,15 +102,36 @@
           <div class="tekens" id="tekens-bevat"></div>
         </div>
         <div class="col-sm" id="resultaat">
-          <label for="result-ga">Google Analytics RegEx Exact</label>
+          <label for="result-ga">Google Search Console RegEx Exact</label>
           <textarea class="textarea-results" id="result-exact"></textarea>
           <div class="tekens" id="tekens-exact"></div>
         </div>
       </div>
     </div>
     <div class="container-sm">
-      <h1>Zoekwoord RegEx maken voor Google Search Console</h1>
-      <p>Hier volgt uitleg....</p>
+      <div class="body-text">
+        <h1>Zoekwoord RegEx maken voor Google Search Console</h1>
+        <p>Heb je SEO optimalisaties gedaan voor een specifieke set aan zoekwoorden en wil je vervolgens de resultaten zien van die specifieke zoekwoorden in Google Search Console? Dan bouw je deze RegEx makkelijk op met deze tool.</p>
+        <h2>Hoe gebruik je deze zoekwoorden RegEx builder?</h2>
+        <p>Plak een set aan zoekwoorden in het tekstvak en kies vervolgens of de filter deze zoekwoorden moeten bevatten of exact die zoekwoorden moeten zijn.<br><br><b>Bijvoorbeeld:</b> Je hebt voor elke plaatsnaam in Nederland een pagina (https://www.voorbeeld.nl/amsterdam & https://www.voorbeeld.nl/utrecht) en eronder een subpagina met /contact (https://www.voorbeeld.nl/amsterdam/contact & https://www.voorbeeld.nl/utrecht/contact ) . Je hebt geoptimaliseerd voor de zoekwoorden ‘amsterdam’, ‘amsterdam contact’, ‘utrecht’ en ‘utrecht contact’.<br><br>Kies je voor exact? Dan zie je enkel de resultaten van de zoekwoorden ‘amsterdam’ en ‘utrecht’. Kies je voor bevat? Dan zie je alles zoekwoorden in Google Search Console waar ‘amsterdam’ en ‘utrecht’ in zit, dus ook ‘amsterdam contact’ en ‘utrecht contact’.</p>
+        <h3>Voorbeeld RegEx bevat voor Google Search Console</h3>
+        <pre><code>\b(amsterdam|utrecht)\b</code></pre>
+        <h3>Voorbeeld RegEx exact voor Google Search Console</h3>
+        <pre><code>^(amsterdam|utrecht)$</code></pre>
+        <h2>Hoe gebruik je de RegEx in Google Search Console?</h2>
+        <p><b>Stap 1:</b> Ga naar Google Search Console en klik in Prestaties als nieuwe filter voor ‘Pagina’.</p>
+        <img src="../images/zoekwoord-regex-builder-gsc-1.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 1">
+        <p><b>Stap 2:</b> Klik vervolgens op ‘Aangepast (regex)’</p>
+        <img src="../images/zoekwoord-regex-builder-gsc-2.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 2">
+        <p><b>Stap 3:</b> De standaard optie is hier ‘Komt overeen met regex’ , laat dit ongewijzigd.</p>
+        <img src="../images/zoekwoord-regex-builder-gsc-3.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 3">
+        <p><b>Stap 4:</b> Plak de RegEx in het vak en klik op ‘Toepassen’.</p>
+        <img src="../images/zoekwoord-regex-builder-gsc-4.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 4">
+        <h2>RegEx voor vragen</h2>
+        <p>Met onderstaande RegEx vind je gemakkelijk alle vragen in jouw Google Search Console Property. Door alle zoekwoorden met 'wie', 'wat' etc. te zoeken vind je gemakkelijk input voor content of je FAQ!</p>
+        <pre><code>\b(zijn|kan|hoe|wat|wanneer|waar|welke|wie|waarom|wil)\b</code></pre>
+        <p>Deze tool is als hobbyproject gemaakt. Heb je een bug gevonden of een idee hoe deze tool verbeterd kan worden? Aarzel niet om <a href="https://www.thijsvanhal.nl/contact/">contact met mij op te nemen!</a></p>
+      </div>
     </div>
     <!-- JS Files -->
     <script type="text/javascript" async src="../files/bootstrap.min.js"></script>
