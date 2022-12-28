@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+Redirect 301 /index.html https://regex.thijsvanhal.nl/
+Redirect 301 /zoekwoorden/index.html https://regex.thijsvanhal.nl/
