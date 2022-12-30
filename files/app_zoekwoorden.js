@@ -17,13 +17,21 @@ function generateRegexExact(values) {
 // Functie Length GSC
 function getLengthBevat(regexBevat) {
     const string = regexBevat.toString()
-    return new String(`${string.length} Tekens`);
+    if (document.documentElement.lang === 'nl') {
+        return new String(`${string.length} Tekens`);
+    } else if(document.documentElement.lang === 'en') {
+        return new String(`${string.length} Characters`);
+    }
 }
 
 // Functie Length GA
 function getLengthExact(regexExact) {
     const string = regexExact.toString()
-    return new String(`${string.length} Tekens`);
+    if (document.documentElement.lang === 'nl') {
+        return new String(`${string.length} Tekens`);
+    } else if(document.documentElement.lang === 'en') {
+        return new String(`${string.length} Characters`);
+    }
 }
 
 // Constanten

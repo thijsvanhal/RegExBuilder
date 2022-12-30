@@ -37,13 +37,21 @@ function generateRegexGA(values) {
 // Functie Length GSC
 function getLengthGSC(regexgsc) {
     const string = regexgsc.toString()
-    return new String(`${string.length} Tekens`);
+    if (document.documentElement.lang === 'nl') {
+        return new String(`${string.length} Tekens`);
+    } else if(document.documentElement.lang === 'en') {
+        return new String(`${string.length} Characters`);
+    }
 }
 
 // Functie Length GA
 function getLengthGA(regexga) {
     const string = regexga.toString()
-    return new String(`${string.length} Tekens`);
+    if (document.documentElement.lang === 'nl') {
+        return new String(`${string.length} Tekens`);
+    } else if(document.documentElement.lang === 'en') {
+        return new String(`${string.length} Characters`);
+    }
 }
 
 // Constanten

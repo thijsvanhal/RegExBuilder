@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zoekwoord RegEx Builder voor GSC | RegEx Builder</title>
+  <title>Keyword RegEx Builder for GSC | RegEx Builder</title>
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Specifieke zoekwoorden filteren met RegEx in Google Search Console? Met de RegEx builder bouw je gemakkelijk een reguliere expressie met meerdere zoekwoorden.">
+  <meta name="description" content="Want to filter specific keywords with RegEx in Google Search Console? With the RegEx builder you can easily build a regular expression for multiple keywords.">
   <link rel="alternate" hreflang="nl" href="/zoekwoorden/">
   <link rel="alternate" hreflang="en" href="/en/keywords/">
   <link rel="alternate" hreflang="x-default" href="/zoekwoorden/">
-  <link rel="stylesheet" href="../files/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="../files/styles.css" type="text/css">
+  <link rel="stylesheet" href="/files/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="/files/styles.css" type="text/css">
   <link rel="preload" as="font" href="/files/font/mada-regular-webfont.woff2">
   <link rel="preload" as="font" href="/files/font/mada-bold-webfont.woff2">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -23,16 +23,16 @@
   <style type="text/css" media="screen">
     @font-face {
       font-family: 'madaregular';
-      src: url('../files/font/mada-regular-webfont.woff2') format('woff2'),
-         url('../files/font/mada-regular-webfont.woff') format('woff');
+      src: url('/files/font/mada-regular-webfont.woff2') format('woff2'),
+         url('/files/font/mada-regular-webfont.woff') format('woff');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: 'madabold';
-      src: url('../files/font/mada-bold-webfont.woff2') format('woff2'),
-         url('../files/font/mada-bold-webfont.woff') format('woff');
+      src: url('/files/font/mada-bold-webfont.woff2') format('woff2'),
+         url('/files/font/mada-bold-webfont.woff') format('woff');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
@@ -83,21 +83,21 @@
         <div class="navbar-collapse collapse" id="navContent">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/">Pagina's</a>
+              <a class="nav-link" href="/en/pages/">Pages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/zoekwoorden/">Zoekwoorden</a>
+              <a class="nav-link active" href="/en/keywords/">Keywords</a>
             </li>
           </ul>
           <ul class="navbar-nav mr-auto" id="second-menu">
             <li class="nav-item">
-              <a class="nav-link active" href="/zoekwoorden/">NL</a>
+              <a class="nav-link" href="/zoekwoorden/">NL</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">/</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/en/keywords/">EN</a>
+              <a class="nav-link active" href="/en/keywords/">EN</a>
             </li>
           </ul>
         </div>
@@ -105,17 +105,17 @@
     </nav>
     <div class="container-sm" id="top-container">
       <p>
-        <label for="input-area">Voeg hier je zoekwoorden toe</label>
+        <label for="input-area">Add your keywords here</label>
         <textarea class="input-area" id="input-area" rows="6"></textarea>
       </p>
     </div>
     <div class="container-sm">
-      <button type="button" class="btn btn-primary" id="generate-button">Genereer RegEx</button>
+      <button type="button" class="btn btn-primary" id="generate-button">Generate RegEx</button>
     </div>
     <div class="container-sm">
       <div class="row">
         <div class="col-sm" id="resultaat">
-          <label for="result-bevat">Google Search Console RegEx Bevat</label>
+          <label for="result-bevat">Google Search Console RegEx Contains</label>
           <textarea class="textarea-results" id="result-bevat"></textarea>
           <div class="tekens" id="tekens-bevat"></div>
         </div>
@@ -128,31 +128,31 @@
     </div>
     <div class="container-sm">
       <div class="body-text">
-        <h1>Zoekwoord RegEx maken voor Google Search Console</h1>
-        <p>Heb je SEO optimalisaties gedaan voor een specifieke set aan zoekwoorden en wil je vervolgens de resultaten zien van die specifieke zoekwoorden in Google Search Console? Dan bouw je deze RegEx makkelijk op met deze tool.</p>
-        <h2>Hoe gebruik je deze zoekwoorden RegEx builder?</h2>
-        <p>Plak een set aan zoekwoorden in het tekstvak en kies vervolgens of de filter deze zoekwoorden moet bevatten of exact die zoekwoorden moeten zijn.<br><br><b>Bijvoorbeeld:</b> Je hebt voor elke plaatsnaam in Nederland een pagina (https://www.voorbeeld.nl/amsterdam & https://www.voorbeeld.nl/utrecht) en eronder een subpagina met /contact (https://www.voorbeeld.nl/amsterdam/contact & https://www.voorbeeld.nl/utrecht/contact ) . Je hebt geoptimaliseerd voor de zoekwoorden &apos;amsterdam&apos;, &apos;amsterdam contact&apos;, &apos;utrecht&apos; en &apos;utrecht contact&apos;.<br><br>Kies je voor exact? Dan zie je enkel de resultaten van de zoekwoorden &apos;amsterdam&apos; en &apos;utrecht&apos;. Kies je voor bevat? Dan zie je alles zoekwoorden in Google Search Console waar &apos;amsterdam&apos; en &apos;utrecht&apos; in zit, dus ook &apos;amsterdam contact&apos; en &apos;utrecht contact&apos;.</p>
-        <h3>Voorbeeld RegEx bevat voor Google Search Console</h3>
+        <h1>Build Keyword RegEx for Google Search Console</h1>
+        <p>Did you do SEO optimizations for a specific set of keywords and would you like to see the results of these specific keywords in Google Search Console? Then build your RegEx easily with this tool.</p>
+        <h2>How do you use this keywords RegEx builder?</h2>
+        <p>Paste a set of keywords in the textarea and choose if the filter needs to contain of be exact those keywords.<br><br><b>For example:</b> You&apos;ve got a page for every city in the Netherlands (https://www.example.com/amsterdam & https://www.example.com/utrecht) and a subpage with /contact (https://www.example.com/amsterdam/contact & https://www.example.com/utrecht/contact ). You've optimized for the keywords &apos;amsterdam&apos;, &apos;amsterdam contact&apos;, &apos;utrecht&apos; and &apos;utrecht contact&apos;.<br><br>Choose for exact? You&apos;ll only see the results of the keywords &apos;amsterdam&apos; and &apos;utrecht&apos;. Choose for contains? Then you&apos;ll see all keywords in Google Search Console where &apos;amsterdam&apos; and &apos;utrecht&apos; is in the keyword, also &apos;amsterdam contact&apos; and &apos;utrecht contact&apos;.</p>
+        <h3>Example contains RegEx for Google Search Console</h3>
         <pre><code>\b(amsterdam|utrecht)\b</code></pre>
-        <h3>Voorbeeld RegEx exact voor Google Search Console</h3>
+        <h3>Example exact RegEx for Google Search Console</h3>
         <pre><code>^(amsterdam|utrecht)$</code></pre>
-        <h2>Hoe gebruik je de RegEx in Google Search Console?</h2>
-        <p><b>Stap 1:</b> Ga naar Google Search Console en klik in Prestaties als nieuwe filter voor &apos;Zoekopdracht&apos;.</p>
-        <img src="../images/zoekwoord-regex-builder-gsc-1.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 1">
-        <p><b>Stap 2:</b> Klik vervolgens op &apos;Aangepast (regex)&apos;</p>
-        <img src="../images/zoekwoord-regex-builder-gsc-2.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 2">
-        <p><b>Stap 3:</b> De standaard optie is hier &apos;Komt overeen met regex&apos; , laat dit ongewijzigd.</p>
-        <img src="../images/zoekwoord-regex-builder-gsc-3.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 3">
-        <p><b>Stap 4:</b> Plak de RegEx in het vak en klik op &apos;Toepassen&apos;.</p>
-        <img src="../images/zoekwoord-regex-builder-gsc-4.jpg" class="img-fluid" alt="Zoekwoorden RegEx builder GSC stap 4">
-        <h2>RegEx voor vragen</h2>
-        <p>Met onderstaande RegEx vind je gemakkelijk alle vragen in jouw Google Search Console Property. Door alle zoekwoorden met 'wie', 'wat' etc. te zoeken vind je gemakkelijk input voor content of je FAQ!</p>
-        <pre><code>\b(zijn|kan|hoe|wat|wanneer|waar|welke|wie|waarom|wil)\b</code></pre>
-        <p>Deze tool is als hobbyproject gemaakt. Heb je een bug gevonden of een idee hoe deze tool verbeterd kan worden? Aarzel niet om <a href="https://www.thijsvanhal.nl/contact/">contact met mij op te nemen!</a></p>
+        <h2>How do you use the RegEx in Google Search Console?</h2>
+        <p><b>Step 1:</b> Go to Google Search Console en click in the &apos;Performance&apos; report for &apos;Query&apos; as a new filter.</p>
+        <img src="/images/zoekwoord-regex-builder-gsc-1.jpg" class="img-fluid" alt="Keywords RegEx builder GSC step 1">
+        <p><b>Step 2:</b> Click on &apos;Custom (regex)&apos;</p>
+        <img src="/images/zoekwoord-regex-builder-gsc-2.jpg" class="img-fluid" alt="Keywords RegEx builder GSC step 2">
+        <p><b>Step 3:</b> The standard option here is &apos;matches regex&apos; , leave this unchanged.</p>
+        <img src="/images/zoekwoord-regex-builder-gsc-3.jpg" class="img-fluid" alt="Keywords RegEx builder GSC step 3">
+        <p><b>Step 4:</b> Paste the RegEx in the area and click on &apos;Apply&apos;.</p>
+        <img src="/images/zoekwoord-regex-builder-gsc-4.jpg" class="img-fluid" alt="Keywords RegEx builder GSC step 4">
+        <h2>RegEx for questions</h2>
+        <p>With the RegEx below you&apos;ll easily find all questions in your Google Search Console Property. By searching all queries with 'who', 'what' etc. you&apos;ll easily find input for content or your FAQ!</p>
+        <pre><code>\b(are|can|how|what|when|where|which|who|why|will)\b</code></pre>
+        <p>This tool is made as a hobby project. Did you find a bug or do you have an idea to improve this tool? Don't hesitate to <a href="https://www.thijsvanhal.nl/contact/">contact me!</a></p>
       </div>
     </div>
     <!-- JS Files -->
-    <script type="text/javascript" async src="../files/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../files/app_zoekwoorden.js"></script>      
+    <script type="text/javascript" async src="/files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/files/app_zoekwoorden.js"></script>      
   </body>
 </html>
