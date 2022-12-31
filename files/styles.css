@@ -136,3 +136,7 @@ input {
         margin-right: 5px;
     }
 }
+a {
+    font-family: madabold !important;
+    color: #02343f !important;
+}
